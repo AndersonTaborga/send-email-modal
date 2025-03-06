@@ -1,0 +1,120 @@
+/* ======= Configuração Geral ======= */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* ======= Estilização do Modal ======= */
+.modal-content {
+    border-radius: 8px;
+    max-width: 600px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho do Modal */
+.modal-header {
+    border-bottom: none;
+}
+
+/* Modal título */
+.modal-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* ======= Estilização do Campo de E-mail ======= */
+.email-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Ajuste de espaçamento para os botões */
+}
+
+.email-input {
+    padding-left: 40px; /* Espaço para o ícone */
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+    transition: border-bottom 0.3s ease-in-out;
+    box-shadow: none !important;
+    outline: none !important;
+    width: 100%;
+}
+
+/* Apenas a borda inferior azul no hover e foco */
+.email-input:focus,
+.email-input:hover {
+    border-bottom: 2px solid #007bff;
+}
+
+/* Ícone à esquerda do input */
+.email-icon {
+    position: absolute;
+    left: 10px;
+    font-size: 18px;
+    color: #5a6268; /* Cinza escuro */
+}
+
+/* Mantém o ícone visível ao clicar */
+.email-container:focus-within .email-icon {
+    color: #5a6268;
+}
+
+/* ======= Ajuste dos Botões ======= */
+.buttons-container {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 10px; /* Espaçamento para não ficarem colados no input */
+}
+
+/* Estilo do botão Anexar */
+.btn-outline-secondary {
+    border-color: #ccc;
+    color: #333;
+    background-color: white;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #e0e0e0;
+    color: black;
+}
+
+/* Botão "Enviar e Salvar" */
+.btn-primary {
+    background-color: #005a9e;
+    border: none;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #00457a;
+}
+
+/* ======= Estilização dos Ícones ======= */
+.copy-icon {
+    font-size: 18px;
+    cursor: pointer;
+    color: #6c757d;
+    transition: color 0.2s ease-in-out;
+}
+
+.copy-icon:hover {
+    color: #5a6268;
+}
+
+/* Popover de "Copiado" */
+.popover-copied {
+    position: absolute;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Exibição do popover */
+.show-popover {
+    opacity: 1;
+}
