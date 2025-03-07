@@ -5,16 +5,26 @@ body {
 }
 
 /* ======= Estilização do Modal ======= */
+.modal-dialog {
+    max-width: 750px; /* Aumentado para mais largura */
+    width: 90%; /* Responsivo */
+}
+
 .modal-content {
     border-radius: 8px;
-    max-width: 600px;
+    padding: 20px; /* Maior espaçamento interno */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Modal título */
 .modal-title {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
+}
+
+/* Ajuste de espaçamento entre elementos do modal */
+.modal-body {
+    padding: 20px;
 }
 
 /* ======= Estilização do Campo de E-mail ======= */
@@ -22,6 +32,7 @@ body {
     position: relative;
     display: flex;
     align-items: center;
+    margin-bottom: 20px; /* Mais espaço abaixo */
 }
 
 .email-input {
@@ -32,13 +43,14 @@ body {
     box-shadow: none !important;
     outline: none !important;
     width: 100%;
+    height: 45px; /* Aumentado para melhor visualização */
 }
 
 /* Ícone à esquerda do input */
 .email-icon {
     position: absolute;
     left: 10px;
-    font-size: 20px;
+    font-size: 22px;
     color: #5a6268;
 }
 
@@ -47,6 +59,7 @@ body {
     display: flex;
     align-items: center;
     gap: 5px;
+    height: 45px; /* Ajustado para alinhamento melhor */
 }
 
 /* Botão Anexar */
@@ -59,6 +72,16 @@ body {
 .btn-outline-secondary:hover {
     background-color: #e0e0e0;
     color: black;
+}
+
+/* Indicador de Anexo Pequeno */
+.anexo-status {
+    display: none;
+    font-size: 12px;
+    color: green;
+    position: absolute;
+    top: -12px;
+    right: 5px;
 }
 
 /* Botão "Registrar e Enviar" */
@@ -74,14 +97,14 @@ body {
 
 /* ======= Estilização do Campo de E-mails Extras (textarea) ======= */
 .email-textarea {
-    border: 1px solid #ccc; /* Bordas finas cinza */
-    border-bottom: 2px solid #ccc; /* Borda inferior cinza inicialmente */
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #ccc;
     border-radius: 4px;
-    padding: 8px;
+    padding: 12px;
     font-size: 14px;
     resize: none;
     width: 100%;
-    height: 80px;
+    height: 100px; /* Aumentado para mais espaço */
     box-shadow: none !important;
     outline: none !important;
 }
@@ -100,7 +123,7 @@ body {
 
 /* ======= Estilização dos Ícones ======= */
 .copy-icon {
-    font-size: 20px;
+    font-size: 22px;
     cursor: pointer;
     color: #6c757d;
     transition: color 0.2s ease-in-out;
