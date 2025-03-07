@@ -11,8 +11,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <!-- Ícones do Bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- Ícones do Google Fonts (Material Icons) -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Estilos customizados -->
     <link rel="stylesheet" href="style.css">
@@ -22,33 +22,41 @@
     <!-- Modal -->
     <div class="modal fade show d-block" id="emailModal" tabindex="-1" aria-labelledby="modalLabel">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content shadow-sm">
+            <div class="modal-content shadow-sm p-3">
 
                 <!-- Cabeçalho do Modal -->
-                <div class="modal-header border-0">
+                <div class="modal-header border-0 pb-0">
                     <h5 class="modal-title fw-bold" id="modalLabel">E-mail de confirmação de contratação</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                 </div>
 
                 <!-- Corpo do Modal -->
                 <div class="modal-body">
-                    <p>Consultor, confira se o registro da venda foi feito de forma correta e os dados do cliente.</p>
+                    <p class="mb-2">Consultor, confira se o registro da venda foi feito de forma correta e os dados do cliente.</p>
 
-                    <!-- Campo de E-mail com ícone à esquerda -->
-                    <div class="email-container">
-                        <span class="email-icon"><i class="bi bi-arrow-right"></i></span>
-                        <input type="email" class="form-control email-input" id="emailPrincipal" placeholder="Digite um e-mail" onblur="validarEmail(this)" onkeypress="adicionarEmail(event)">
+                    <!-- Campo de E-mail (Bloqueado e com ícone de avião) -->
+                    <div class="email-container mb-3">
+                        <span class="email-icon"><i class="material-icons">send</i></span>
+                        <input type="email" class="form-control email-input" id="emailPrincipal" value="fulano.detal@gmail.com" readonly>
                     </div>
-                    <div id="emailError" class="text-danger small"></div>
 
-                    <!-- Botões de ação -->
-                    <div class="d-flex gap-2 mb-3">
-                        <button class="btn btn-outline-secondary">📎 Anexar Arquivo</button>
-                        <button class="btn btn-primary">Enviar e Salvar</button>
+                    <!-- Botões alinhados à direita -->
+                    <div class="d-flex justify-content-end gap-2 mb-3">
+                        <button class="btn btn-outline-secondary">
+                            <i class="material-icons">attach_file</i> Anexar Arquivo
+                        </button>
+                        <button class="btn btn-primary">
+                            <i class="material-icons">send</i> Registrar e Enviar
+                        </button>
+                    </div>
+
+                    <!-- Campo para inserir e-mails manualmente -->
+                    <div class="email-manual-container mb-3">
+                        <textarea class="form-control email-textarea" id="emailExtra" placeholder="Digite outros e-mails separados por ponto e vírgula"></textarea>
                     </div>
 
                     <!-- Tabela de e-mails -->
-                    <table class="table" id="emailTable">
+                    <table class="table">
                         <thead>
                             <tr>
                                 <th class="fw-bold">E-mail <span class="ms-1">↑</span></th>
@@ -57,9 +65,16 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>fulano.detal@gmail.com</td>
+                                <td>beltrano@hotmail.com</td>
                                 <td class="text-center position-relative">
-                                    <i class="bi bi-clipboard copy-icon" onclick="copiarTexto(this, 'fulano.detal@gmail.com')"></i>
+                                    <i class="material-icons copy-icon" onclick="copiarTexto(this, 'beltrano@hotmail.com')">content_copy</i>
+                                    <span class="popover-copied">Copiado</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>ciclano@hotmail.com</td>
+                                <td class="text-center position-relative">
+                                    <i class="material-icons copy-icon" onclick="copiarTexto(this, 'ciclano@hotmail.com')">content_copy</i>
                                     <span class="popover-copied">Copiado</span>
                                 </td>
                             </tr>
